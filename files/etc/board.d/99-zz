@@ -5,6 +5,6 @@ board_config_update
 ucidef_set_hostname "XGP-a1"
 ucidef_set_root_password_plain "admin888"
 ucidef_set_country "CN"
-ucidef_set_wireless "all" "XGP" "psk2+ccmp" "66668888"
+ucidef_set_wireless "all" "XGP" "sae-mixed" "66668888"
 
 board_config_flush
