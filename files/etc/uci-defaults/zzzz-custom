@@ -2,13 +2,13 @@
 is_first_boot=`uci -q get zz_config.@status[0].first_boot`
 if test $is_first_boot -gt 0; then
 uci del dhcp.lan.ra_slaac
-# uci set network.lan.ipaddr='10.0.0.1/24'
+uci set network.lan.ipaddr='192.168.99.1/24'
 uci add_list network.lan.ip6class='mpcie1v6'
 uci add_list network.lan.ip6class='mpcie2v6'
 uci add_list network.lan.ip6class='wwanv6'
 uci add_list network.lan.ip6class='wan6'
 uci set luci.main.lang='zh_cn'
-uci set luci.main.mediaurlbase='/luci-static/aurora'
+uci set luci.main.mediaurlbase='/luci-static/argon'
 uci add system led
 uci set system.@led[-1].name='system_status'
 uci set system.@led[-1].sysfs='blue:status'
